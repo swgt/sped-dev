@@ -80,8 +80,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'speddb',
         'USER': 'postgres',
-        'PASSWORD': '123',
-        'HOST': '127.0.0.1',
+        'PASSWORD': '1q2w3e4r5t',
+        'HOST': '104.131.18.50',
         'PORT': '5432',
     }
 }
