@@ -1,0 +1,14 @@
+{% load staticfiles %}
+{% block page-content-wrapper %}
+<!-- START PAGE CONTENT WRAPPER -->
+<div class="page-content-wrapper">
+    {% block page-content %}
+    {% include "base/page-content.html" %}
+    {% endblock %}
+
+    {% block copyright %}
+    {% include "base/copyright.html" %}
+    {% endblock %}
+</div>
+<!-- END PAGE CONTENT WRAPPER -->
+{% endblock %}

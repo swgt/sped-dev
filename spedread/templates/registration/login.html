@@ -1,0 +1,90 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+SPED Read - Login
+{% endblock %}
+
+{% block page-container %}
+  {% block header %}{% endblock %}
+
+  {% block page-content-wrapper %}
+    <!-- START PAGE-CONTAINER -->
+    <div class="login-wrapper ">
+      <!-- START Login Background Pic Wrapper-->
+      <div class="bg-pic">
+        <!-- START Background Pic-->
+        <img src="{% static "img/demo/new-york-city-buildings-sunrise-morning-hd-wallpaper.jpg" %}" data-src="{% static "img/demo/new-york-city-buildings-sunrise-morning-hd-wallpaper.jpg" %}" data-src-retina="{% static "img/demo/new-york-city-buildings-sunrise-morning-hd-wallpaper.jpg" %}" alt="" class="lazy">
+        <!-- END Background Pic-->
+        <!-- START Background Caption-->
+        <div class="bg-caption pull-bottom sm-pull-bottom text-white p-l-20 m-b-20">
+          <h2 class="semi-bold text-white">
+					Pages make it easy to enjoy what matters the most in the life</h2>
+          <p class="small">
+            images Displayed are solely for representation purposes only, All work copyright of respective owner, otherwise © 2013-2014 REVOX.
+          </p>
+        </div>
+        <!-- END Background Caption-->
+      </div>
+      <!-- END Login Background Pic Wrapper-->
+      <!-- START Login Right Container-->
+      <div class="login-container bg-white">
+        <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
+          <img src="{% static "img/logo.png" %}" alt="logo" data-src="{% static "img/logo.png" %}" data-src-retina="{% static "img/logo_2x.png" %}" width="78" height="22">
+          <p class="p-t-35">Entre na sua conta para prosseguir para o SPED Read</p>
+          <!-- START Login Form -->
+          <form id="form-login" class="p-t-15" role="form" method="post" action="{% url 'django.contrib.auth.views.login' %}">{% csrf_token %}
+            <!-- START Form Control-->
+            <div class="form-group form-group-default">
+              <label>Username</label>
+              <div class="controls">
+                <input type="text" id="id_username" name="username" placeholder="Nome de Usuário" class="form-control" required>
+              </div>
+            </div>
+            <!-- END Form Control-->
+            <!-- START Form Control-->
+            <div class="form-group form-group-default">
+              <label>Senha</label>
+              <div class="controls">
+                <input type="password" class="form-control" id="id_password" name="password" placeholder="Credenciais" required>
+              </div>
+            </div>
+            <!-- START Form Control-->
+            <div class="row">
+              <div class="col-md-6 no-padding">
+                <div class="checkbox ">
+                  <input type="checkbox" value="1" id="checkbox1">
+                  <label for="checkbox1">Mantenha-me conectado</label>
+                </div>
+              </div>
+              <div class="col-md-6 text-right">
+                <a href="#" class="text-info small">Ajuda? Contate o Suporte</a>
+              </div>
+            </div>
+            <!-- END Form Control-->
+            {% if form.errors %}
+                <p class="alert alert-danger" style="margin-bottom: 0;">Seu nome de usuário e a senha não coincidem. Por favor, tente novamente.</p>
+            {% endif %}
+            <button class="btn btn-primary btn-cons m-t-10" type="submit">Entrar</button>
+            <input type="hidden" name="next" value="{{ next }}" />
+          </form>
+          <!--END Login Form-->
+          <div class="pull-bottom sm-pull-bottom">
+            <div class="m-b-30 p-r-80 sm-m-t-20 sm-p-r-15 sm-p-b-20 clearfix">
+              <div class="col-sm-3 col-md-2 no-padding">
+                <img alt="" class="m-t-5" data-src="{% static "img/demo/pages_icon.png" %}" data-src-retina="{% static "img/demo/pages_icon_2x.png" %}" height="60" src="{% static "img/demo/pages_icon.png" %}" width="60">
+              </div>
+              <div class="col-sm-9 no-padding m-t-10">
+                <p><small>
+		        		Crie uma conta ELITE Consultores. Se você tiver uma conta no Facebook, faça o login com ele para este processo. Faça login no <a href="#" class="text-info">Facebook</a> ou <a href="#" class="text-info">Google</a></small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END Login Right Container-->
+    </div>
+    <!-- END PAGE CONTAINER -->
+  {% endblock %}
+{% endblock %}

@@ -1,9 +1,13 @@
 from django.shortcuts import render, render_to_response
+from django.contrib.auth.decorators import login_required
 from .forms import UploadFileForm
 from django.template import RequestContext
 
-# Create your views here.
+@login_required
+def home(request):
+    return render(request, 'index.html', {})
 
+@login_required
 def upload_file(request):
 	if request.method == 'POST':
 		
@@ -13,5 +17,5 @@ def upload_file(request):
 		return render(request, 'index.html', {})
 	else:
 		form = UploadFileForm()
-		return render(request, 'index.html', {'form': form})
+		return render(request, 'index.html', {})
 	
