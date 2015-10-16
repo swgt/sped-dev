@@ -4,4 +4,8 @@ from .models import *
 
 admin.site.register(Bloco)
 admin.site.register(Registro)
-admin.site.register(Campo)
+
+class CampoAdmin(admin.ModelAdmin):
+    list_display = ('registro','nome','num_posicao', 'descricao')
+
+admin.site.register(Campo, CampoAdmin)
