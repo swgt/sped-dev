@@ -1,0 +1,14 @@
+{% load staticfiles %}
+{% block page-container %}
+<!-- START PAGE-CONTAINER -->
+<div class="page-container">
+  {% block header %}
+  {% include "base/header.html" %}
+  {% endblock %}
+
+  {% block page-content-wrapper %}
+  {% include "base/page-content-wrapper.html" %}
+  {% endblock %}
+</div>
+<!-- END PAGE CONTAINER -->
+{% endblock %}
