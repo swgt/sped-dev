@@ -21,74 +21,57 @@ SPED Read - Admin
             {% block page-content %}
                 <!-- START PAGE CONTENT -->
                 <div class="content">
-                  <!-- START CONTAINER FLUID -->
-                  <div class="container-fluid container-fixed-lg bg-white">
-                      <!-- START PANEL -->
-                      <div class="panel panel-transparent">
-                        <div class="panel-heading ">
-                          <div class="panel-title">NVD3 Charts
-                          </div>
-                          <div class="panel-controls">
-                            <ul>
-                              <li><a href="#" class="portlet-collapse" data-toggle="collapse"><i class="pg-arrow_maximize"></i></a>
-                              </li>
-                              <li><a href="#" class="portlet-refresh" data-toggle="refresh"><i class="pg-refresh_new"></i></a>
-                              </li>
-                              <li><a href="#" class="portlet-close" data-toggle="close"><i class="pg-close"></i></a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="panel-body">
-                          <div class="col-md-4 no-padding">
-                            <div class="p-r-30">
-                              <h3>Talk less, show more</h3>
-                              <br>
-                              <p>This project is an attempt to build re-usable charts and chart components for d3.js without taking away the power that d3.js gives you. This is a very young collection of components, with the goal of keeping these components very customizeable, staying away from your standard cookie cutter solutions.</p>
-                              <br>
-                              <div class="inline">
-                                <p class="small hint-text">NVD3: Re-usable charts for d3.js
-                                  <br> <a href="http://nvd3.org/examples/index.html">View the official documentation</a>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-8">
-                            <!-- Nav tabs -->
-                            <ul id="tabs-nvd3" class="nav nav-tabs nav-tabs-linetriangle">
-                              <li class="active">
-                                <a data-toggle="tab" href="#tab-nvd3-line"><span>Line Chart</span></a>
-                              </li>
-                              <li class="">
-                                <a data-toggle="tab" href="#tab-nvd3-area"><span>Stacked Area Charts</span></a>
-                              </li>
-                              <li class="">
-                                <a data-toggle="tab" href="#tab-nvd3-line2"><span>Line Charts with area</span></a>
-                              </li>
-                            </ul>
-                            <!-- Tab panes -->
-                            <div class="tab-content no-padding">
-                              <div class="tab-pane active" id="tab-nvd3-line">
-                                <div id="nvd3-line" class="line-chart m-t-30 text-center" data-x-grid="false">
-                                  <svg></svg>
-                                </div>
-                              </div>
-                              <div class="tab-pane " id="tab-nvd3-area">
-                                <div id="nvd3-area" class="line-chart m-t-30 text-center" data-x-grid="false">
-                                  <svg></svg>
-                                </div>
-                              </div>
-                              <div class="tab-pane " id="tab-nvd3-line2">
-                                <div id="nvd3-line2" class="line-chart" data-line-color="master" data-area-color="master" data-point-color="white" data-x-grid="false" data-points="true" data-stroke-width="1">
-                                  <svg></svg>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                  <!-- START JUMBOTRON -->
+                  <div class="jumbotron" data-pages="parallax">
+                    <div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+                      <div class="inner">
+                        <!-- START BREADCRUMB -->
+                        <ul class="breadcrumb">
+                          <li>
+                            <a href="#">Home</a>
+                          </li>
+                          <li><a href="#" class="active">Upload SPED</a>
+                          </li>
+                        </ul>
+                        <!-- END BREADCRUMB -->
                       </div>
-                      <!-- END PANEL -->
                     </div>
+                  </div>
+                  <!-- END JUMBOTRON -->
+                  <!-- START CONTAINER FLUID -->
+                  <div class="container-fluid container-fixed-lg">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <!-- START PANEL -->
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                            <div class="panel-title">
+                              Drag n' drop uploader
+                            </div>
+                            <div class="tools">
+                              <a class="collapse" href="javascript:;"></a>
+                              <a class="config" data-toggle="modal" href="#grid-config"></a>
+                              <a class="reload" href="javascript:;"></a>
+                              <a class="remove" href="javascript:;"></a>
+                            </div>
+                          </div>
+                          <div class="panel-body no-scroll no-padding">
+                            <form action="/file-upload" class="dropzone no-margin">
+                              <div class="fallback">
+                                <input name="file" type="file" multiple />
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <!-- END PANEL -->
+                      </div>
+                      <div class="col-md-6">
+                        <!-- START PANEL -->
+                        <canvas id="myChart" width="500" height="400"></canvas>
+                        <!-- END PANEL -->
+                      </div>
+                    </div>      
+                  </div>
                 </div>
                 <!-- END PAGE CONTENT -->
             {% endblock %}

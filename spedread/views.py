@@ -31,4 +31,4 @@ def upload_file(request):
     else:
         form = UploadFileForm()
         return render(request, 'file.html', {'form':form})
-	
+
