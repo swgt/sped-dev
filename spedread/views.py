@@ -18,4 +18,3 @@ def upload_file(request):
 	else:
 		form = UploadFileForm()
 		return render(request, 'index.html', {})
-	
