@@ -5,6 +5,12 @@
 	<title>Document</title>
 </head>
 <body>
-	{file}	
+	<form action="" method="post" enctype="multipart/form-data">
+       {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Enviar">
+    </form>
+    
+    {% autoescape off %}{{ document }}{% endautoescape %}
 </body>
 </html>
