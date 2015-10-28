@@ -1,0 +1,12 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/home/manaiajr/Workspace/sped/sped-dev/spedread/static/plugins/nvd3/src/models/bullet.js",
+        "/home/manaiajr/Workspace/sped/sped-dev/spedread/static/plugins/nvd3/src/models/sparkline.js",
+        "/home/manaiajr/Workspace/sped/sped-dev/spedread/static/plugins/nvd3/src/models/ohlcBar.js",
+        "/home/manaiajr/Workspace/sped/sped-dev/spedread/static/plugins/nvd3/src/models/pie.js",
+        "/home/manaiajr/Workspace/sped/sped-dev/spedread/static/plugins/nvd3/src/models/linePlusBarChart.js",
+        "/home/manaiajr/Workspace/sped/sped-dev/spedread/static/plugins/nvd3/src/models/discreteBarChart.js",
+        "/home/manaiajr/Workspace/sped/sped-dev/spedread/static/js/charts/chart-pie-2.js",
+        "/home/manaiajr/Workspace/sped/sped-dev/spedread/static/plugins/nvd3/src/models/boilerplate.js"
+    ]
+}

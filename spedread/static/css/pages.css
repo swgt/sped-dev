@@ -414,9 +414,7 @@ body.dashboard .page-container {
 .page-sidebar .sidebar-menu .menu-items > li > a > .title {
   float: left;
   white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
-  width: 65%;
 }
 .page-sidebar .sidebar-menu .menu-items > li > a > .details {
   font-size: 12px;
@@ -9164,7 +9162,7 @@ Responsive Util
 */
 .login-wrapper {
   height: 100%;
-  background-color: #6d5cae;
+  background-color: #00385F;
 }
 .login-wrapper > * {
   height: 100%;

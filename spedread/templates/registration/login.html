@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block title %}
-SPED Read - Login
+SPED Analytics - Login
 {% endblock %}
 
 {% block page-container %}
@@ -14,14 +14,13 @@ SPED Read - Login
       <!-- START Login Background Pic Wrapper-->
       <div class="bg-pic">
         <!-- START Background Pic-->
-        <img src="{% static "img/demo/new-york-city-buildings-sunrise-morning-hd-wallpaper.jpg" %}" data-src="{% static "img/demo/new-york-city-buildings-sunrise-morning-hd-wallpaper.jpg" %}" data-src-retina="{% static "img/demo/new-york-city-buildings-sunrise-morning-hd-wallpaper.jpg" %}" alt="" class="lazy">
+        <img src="{% static "img/demo/finance-contabil-hd-wallpaper.jpg" %}" data-src="{% static "img/demo/finance-contabil-hd-wallpaper.jpg" %}" data-src-retina="{% static "img/demo/finance-contabil-hd-wallpaper.jpg" %}" alt="" class="lazy">
         <!-- END Background Pic-->
         <!-- START Background Caption-->
         <div class="bg-caption pull-bottom sm-pull-bottom text-white p-l-20 m-b-20">
-          <h2 class="semi-bold text-white">
-					Pages make it easy to enjoy what matters the most in the life</h2>
+          <h2 class="semi-bold text-white">Mais que contabilidade: Confiança. Sua empresa muita mais tranquila</h2>
           <p class="small">
-            images Displayed are solely for representation purposes only, All work copyright of respective owner, otherwise © 2013-2014 REVOX.
+            as imagens exibidas são apenas para fins de representação, Todos os direitos autorais de trabalho proprietário reservados. © 2015-2016 SPED Analytics.
           </p>
         </div>
         <!-- END Background Caption-->
@@ -30,13 +29,13 @@ SPED Read - Login
       <!-- START Login Right Container-->
       <div class="login-container bg-white">
         <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
-          <img src="{% static "img/logo.png" %}" alt="logo" data-src="{% static "img/logo.png" %}" data-src-retina="{% static "img/logo_2x.png" %}" width="78" height="22">
-          <p class="p-t-35">Entre na sua conta para prosseguir para o SPED Read</p>
+          <img src="{% static "img/logo_sped.png" %}" alt="logo" data-src="{% static "img/logo_sped.png" %}" data-src-retina="{% static "img/logo_sped.png" %}" width="150" >
+          <p class="p-t-35">Entre na sua conta para prosseguir para o SPED Analytics</p>
           <!-- START Login Form -->
           <form id="form-login" class="p-t-15" role="form" method="post" action="{% url 'django.contrib.auth.views.login' %}">{% csrf_token %}
             <!-- START Form Control-->
             <div class="form-group form-group-default">
-              <label>Username</label>
+              <label>Nome de Usuário</label>
               <div class="controls">
                 <input type="text" id="id_username" name="username" placeholder="Nome de Usuário" class="form-control" required>
               </div>
@@ -65,7 +64,7 @@ SPED Read - Login
             {% if form.errors %}
                 <p class="alert alert-danger" style="margin-bottom: 0;">Seu nome de usuário e a senha não coincidem. Por favor, tente novamente.</p>
             {% endif %}
-            <button class="btn btn-primary btn-cons m-t-10" type="submit">Entrar</button>
+            <button class="btn btn-complete btn-cons m-t-10" type="submit">Entrar</button>
             <input type="hidden" name="next" value="{{ next }}" />
           </form>
           <!--END Login Form-->

@@ -8,6 +8,10 @@ def home(request):
     return render(request, 'index.html', {})
 
 @login_required
+def upload(request):
+    return render(request, 'upload-file.html', {})
+
+@login_required
 def upload_file(request):
 	if request.method == 'POST':
 		

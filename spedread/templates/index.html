@@ -19,61 +19,419 @@ SPED Read - Admin
         <!-- START PAGE CONTENT WRAPPER -->
         <div class="page-content-wrapper">
             {% block page-content %}
-                <!-- START PAGE CONTENT -->
-                <div class="content">
-                  <!-- START JUMBOTRON -->
-                  <div class="jumbotron" data-pages="parallax">
-                    <div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
-                      <div class="inner">
-                        <!-- START BREADCRUMB -->
-                        <ul class="breadcrumb">
-                          <li>
-                            <a href="#">Home</a>
-                          </li>
-                          <li><a href="#" class="active">Upload SPED</a>
-                          </li>
-                        </ul>
-                        <!-- END BREADCRUMB -->
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END JUMBOTRON -->
-                  <!-- START CONTAINER FLUID -->
-                  <div class="container-fluid container-fixed-lg">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <!-- START PANEL -->
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <div class="panel-title">
-                              Drag n' drop uploader
-                            </div>
-                            <div class="tools">
-                              <a class="collapse" href="javascript:;"></a>
-                              <a class="config" data-toggle="modal" href="#grid-config"></a>
-                              <a class="reload" href="javascript:;"></a>
-                              <a class="remove" href="javascript:;"></a>
-                            </div>
+            <div class="content">  
+              <!-- START CONTAINER FLUID -->
+              <div class="container-fluid container-fixed-lg">
+                <ul class="breadcrumb">
+                  <li>
+                    <a href="#">Home</a>
+                  </li>
+                  <li><a href="#" class="active">Entradas e Saídas</a>
+                  </li>
+                </ul>
+                <!-- END BREADCRUMB -->
+                <div class="panel panel-transparent">
+                    <div class="panel-body no-padding">
+                      <div id="portlet-advance" class="panel panel-default">
+                        <div class="panel-heading ">
+                          <div class="panel-title">Detalhes do Cliente
                           </div>
-                          <div class="panel-body no-scroll no-padding">
-                            <form action="/file-upload" class="dropzone no-margin">
-                              <div class="fallback">
-                                <input name="file" type="file" multiple />
-                              </div>
-                            </form>
+                          <div class="panel-controls">
+                            <ul>
+                              <li>
+                                <div class="dropdown">
+                                  <a id="portlet-settings" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                                    <i class="portlet-icon portlet-icon-settings "></i>
+                                  </a>
+                                  <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="portlet-settings">
+                                    <li><a href="#">API</a>
+                                    </li>
+                                    <li><a href="#">Preferences</a>
+                                    </li>
+                                    <li><a href="#">About</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li><a href="#" class="portlet-collapse" data-toggle="collapse"><i class="portlet-icon portlet-icon-collapse"></i></a>
+                              </li>
+                              <li><a href="#" class="portlet-refresh" data-toggle="refresh"><i class="portlet-icon portlet-icon-refresh"></i></a>
+                              </li>
+                              <li><a href="#" class="portlet-maximize" data-toggle="maximize"><i class="portlet-icon portlet-icon-maximize"></i></a>
+                              </li>
+                              <li><a href="#" class="portlet-close" data-toggle="close"><i class="portlet-icon portlet-icon-close"></i></a>
+                              </li>
+                            </ul>
                           </div>
                         </div>
-                        <!-- END PANEL -->
+                        <div class="panel-body">
+                          <div class="tab-content no-padding">
+                              <div class="tab-pane active" id="tab-nvd3-line">
+                                  <div class="pull-right">
+                                      <h3 style="text-transform: uppercase; font-weight: 600;">Maio/2015</h3>
+                                  </div>
+                                  <h2>Supermercado Super Show</h2>
+                                  <h4>256489794/8898</h4>
+                              </div>
+                          </div>                              
+                        </div>
                       </div>
-                      <div class="col-md-6">
-                        <!-- START PANEL -->
-                        <canvas id="myChart" width="500" height="400"></canvas>
-                        <!-- END PANEL -->
-                      </div>
-                    </div>      
-                  </div>
+                    </div>
                 </div>
-                <!-- END PAGE CONTENT -->
+                <!-- START PANEL -->      
+                <div class="panel panel-transparent">
+                    <div class="panel-body no-padding">
+                      <div id="portlet-advance" class="panel panel-default">
+                        <div class="panel-heading ">
+                          <div class="panel-title">Entradas e Saídas
+                          </div>
+                          <div class="panel-controls">
+                            <ul>
+                              <li>
+                                <div class="dropdown">
+                                  <a id="portlet-settings" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                                    <i class="portlet-icon portlet-icon-settings "></i>
+                                  </a>
+                                  <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="portlet-settings">
+                                    <li><a href="#">API</a>
+                                    </li>
+                                    <li><a href="#">Preferences</a>
+                                    </li>
+                                    <li><a href="#">About</a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li><a href="#" class="portlet-collapse" data-toggle="collapse"><i class="portlet-icon portlet-icon-collapse"></i></a>
+                              </li>
+                              <li><a href="#" class="portlet-refresh" data-toggle="refresh"><i class="portlet-icon portlet-icon-refresh"></i></a>
+                              </li>
+                              <li><a href="#" class="portlet-maximize" data-toggle="maximize"><i class="portlet-icon portlet-icon-maximize"></i></a>
+                              </li>
+                              <li><a href="#" class="portlet-close" data-toggle="close"><i class="portlet-icon portlet-icon-close"></i></a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="panel-body">
+                          <div class="tab-content no-padding">
+                              <div class="tab-pane active" id="tab-nvd3-line">
+                                <div id="chart-line" class="line-chart m-t-30 text-center" data-x-grid="false">
+                                  <svg></svg>
+                                </div>
+                              </div>
+                          </div>                              
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <!-- END PANEL -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="panel panel-transparent">
+                            <div class="panel-body no-padding">
+                              <div id="portlet-advance" class="panel panel-default">
+                                <div class="panel-heading ">
+                                  <div class="panel-title">Entradas e Saídas
+                                  </div>
+                                  <div class="panel-controls">
+                                    <ul>
+                                      <li>
+                                        <div class="dropdown">
+                                          <a id="portlet-settings" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                                            <i class="portlet-icon portlet-icon-settings "></i>
+                                          </a>
+                                          <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="portlet-settings">
+                                            <li><a href="#">API</a>
+                                            </li>
+                                            <li><a href="#">Preferences</a>
+                                            </li>
+                                            <li><a href="#">About</a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </li>
+                                      <li><a href="#" class="portlet-collapse" data-toggle="collapse"><i class="portlet-icon portlet-icon-collapse"></i></a>
+                                      </li>
+                                      <li><a href="#" class="portlet-refresh" data-toggle="refresh"><i class="portlet-icon portlet-icon-refresh"></i></a>
+                                      </li>
+                                      <li><a href="#" class="portlet-maximize" data-toggle="maximize"><i class="portlet-icon portlet-icon-maximize"></i></a>
+                                      </li>
+                                      <li><a href="#" class="portlet-close" data-toggle="close"><i class="portlet-icon portlet-icon-close"></i></a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="panel-body">
+                                  <div class="tab-content no-padding">
+                                      <div class="tab-pane active" id="tab-nvd3-line">
+                                        <div id="chart-pie" class="chart-pie m-t-30 text-center" data-x-grid="false">
+                                          <svg></svg>
+                                        </div>
+                                      </div>
+                                  </div>                              
+                                </div>
+                              </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-transparent">
+                            <div class="panel-body no-padding">
+                              <div id="portlet-advance" class="panel panel-default">
+                                <div class="panel-heading ">
+                                  <div class="panel-title">Detalhes de Entrada
+                                  </div>
+                                  <div class="panel-controls">
+                                    <ul>
+                                      <li>
+                                        <div class="dropdown">
+                                          <a id="portlet-settings" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                                            <i class="portlet-icon portlet-icon-settings "></i>
+                                          </a>
+                                          <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="portlet-settings">
+                                            <li><a href="#">API</a>
+                                            </li>
+                                            <li><a href="#">Preferences</a>
+                                            </li>
+                                            <li><a href="#">About</a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </li>
+                                      <li><a href="#" class="portlet-collapse" data-toggle="collapse"><i class="portlet-icon portlet-icon-collapse"></i></a>
+                                      </li>
+                                      <li><a href="#" class="portlet-refresh" data-toggle="refresh"><i class="portlet-icon portlet-icon-refresh"></i></a>
+                                      </li>
+                                      <li><a href="#" class="portlet-maximize" data-toggle="maximize"><i class="portlet-icon portlet-icon-maximize"></i></a>
+                                      </li>
+                                      <li><a href="#" class="portlet-close" data-toggle="close"><i class="portlet-icon portlet-icon-close"></i></a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="panel-body">
+                                  <div class="tab-content no-padding">
+                                      <div class="tab-pane active" id="tab-nvd3-line">
+                                        <div id="chart-pie-1" class="chart-pie m-t-30 text-center" data-x-grid="false">
+                                          <svg></svg>
+                                        </div>
+                                      </div>
+                                  </div>                              
+                                </div>
+                              </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-transparent">
+                            <div class="panel-body no-padding">
+                              <div id="portlet-advance" class="panel panel-default">
+                                <div class="panel-heading ">
+                                  <div class="panel-title">Detalhes de Saída
+                                  </div>
+                                  <div class="panel-controls">
+                                    <ul>
+                                      <li>
+                                        <div class="dropdown">
+                                          <a id="portlet-settings" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                                            <i class="portlet-icon portlet-icon-settings "></i>
+                                          </a>
+                                          <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="portlet-settings">
+                                            <li><a href="#">API</a>
+                                            </li>
+                                            <li><a href="#">Preferences</a>
+                                            </li>
+                                            <li><a href="#">About</a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </li>
+                                      <li><a href="#" class="portlet-collapse" data-toggle="collapse"><i class="portlet-icon portlet-icon-collapse"></i></a>
+                                      </li>
+                                      <li><a href="#" class="portlet-refresh" data-toggle="refresh"><i class="portlet-icon portlet-icon-refresh"></i></a>
+                                      </li>
+                                      <li><a href="#" class="portlet-maximize" data-toggle="maximize"><i class="portlet-icon portlet-icon-maximize"></i></a>
+                                      </li>
+                                      <li><a href="#" class="portlet-close" data-toggle="close"><i class="portlet-icon portlet-icon-close"></i></a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="panel-body">
+                                  <div class="tab-content no-padding">
+                                      <div class="tab-pane active" id="tab-nvd3-line">
+                                        <div id="chart-pie-2" class="chart-pie m-t-30 text-center" data-x-grid="false">
+                                          <svg></svg>
+                                        </div>
+                                      </div>
+                                  </div>                              
+                                </div>
+                              </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <!-- INÍCIO DA TERCEIRA LINHA, TABELA -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-transparent">
+                            <div class="panel-body no-padding">
+                              <div id="portlet-advance" class="panel panel-default">
+                                <div class="panel-heading ">
+                                  <div class="panel-title">Entradas
+                                  </div>
+                                  <div class="panel-controls">
+                                    <ul>
+                                      <li>
+                                        <div class="dropdown">
+                                          <a id="portlet-settings" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                                            <i class="portlet-icon portlet-icon-settings "></i>
+                                          </a>
+                                          <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="portlet-settings">
+                                            <li><a href="#">API</a>
+                                            </li>
+                                            <li><a href="#">Preferences</a>
+                                            </li>
+                                            <li><a href="#">About</a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </li>
+                                      <li><a href="#" class="portlet-collapse" data-toggle="collapse"><i class="portlet-icon portlet-icon-collapse"></i></a>
+                                      </li>
+                                      <li><a href="#" class="portlet-refresh" data-toggle="refresh"><i class="portlet-icon portlet-icon-refresh"></i></a>
+                                      </li>
+                                      <li><a href="#" class="portlet-maximize" data-toggle="maximize"><i class="portlet-icon portlet-icon-maximize"></i></a>
+                                      </li>
+                                      <li><a href="#" class="portlet-close" data-toggle="close"><i class="portlet-icon portlet-icon-close"></i></a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="panel-body">
+                                  <div class="tab-content no-padding">
+                                    <table class="table table-striped demo-table-search" id="tableWithSearch">
+                                      <thead>
+                                        <tr>
+                                          <th>Data</th>
+                                          <th>Envolvido</th>
+                                          <th>Valor</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="v-align-left">
+                                            <p>10/10/2015</p>
+                                          </td>
+                                          <td class="v-align-left">
+                                            <p>JOÃO MARIA DA COSTA SILVA</p>
+                                          </td>
+                                          <td class="v-align-left">
+                                            <p>R$ 270,00</p>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="v-align-left">
+                                            <p>12/10/2015</p>
+                                          </td>
+                                          <td class="v-align-left">
+                                            <p>CARLOS EDUARDO PEREIRA</p>
+                                          </td>
+                                          <td class="v-align-left">
+                                            <p>R$ 58,50</p>
+                                          </td>
+                                        </tr>
+                                       
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  </div>                              
+                                </div>
+                              </div>
+                            </div>
+                        </div>    
+                    <div class="col-md-6">
+                        <div class="panel panel-transparent">
+                            <div class="panel-body no-padding">
+                              <div id="portlet-advance" class="panel panel-default">
+                                <div class="panel-heading ">
+                                  <div class="panel-title">Saídas
+                                  </div>
+                                  <div class="panel-controls">
+                                    <ul>
+                                      <li>
+                                        <div class="dropdown">
+                                          <a id="portlet-settings" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                                            <i class="portlet-icon portlet-icon-settings "></i>
+                                          </a>
+                                          <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="portlet-settings">
+                                            <li><a href="#">API</a>
+                                            </li>
+                                            <li><a href="#">Preferences</a>
+                                            </li>
+                                            <li><a href="#">About</a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </li>
+                                      <li><a href="#" class="portlet-collapse" data-toggle="collapse"><i class="portlet-icon portlet-icon-collapse"></i></a>
+                                      </li>
+                                      <li><a href="#" class="portlet-refresh" data-toggle="refresh"><i class="portlet-icon portlet-icon-refresh"></i></a>
+                                      </li>
+                                      <li><a href="#" class="portlet-maximize" data-toggle="maximize"><i class="portlet-icon portlet-icon-maximize"></i></a>
+                                      </li>
+                                      <li><a href="#" class="portlet-close" data-toggle="close"><i class="portlet-icon portlet-icon-close"></i></a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="panel-body">
+                                  <div class="tab-content no-padding">
+                                      <table class="table table-striped demo-table-search" id="tableWithSearch2">
+                                      <thead>
+                                        <tr>
+                                          <th>Data</th>
+                                          <th>Envolvido</th>
+                                          <th>Valor</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="v-align-left">
+                                            <p>10/10/2015</p>
+                                          </td>
+                                          <td class="v-align-left">
+                                            <p>JOÃO MARIA DA COSTA SILVA</p>
+                                          </td>
+                                          <td class="v-align-left">
+                                            <p>R$ 270,00</p>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="v-align-left">
+                                            <p>12/10/2015</p>
+                                          </td>
+                                          <td class="v-align-left">
+                                            <p>CARLOS EDUARDO PEREIRA</p>
+                                          </td>
+                                          <td class="v-align-left">
+                                            <p>R$ 58,50</p>
+                                          </td>
+                                        </tr>
+                                       
+                                      </tbody>
+                                    </table>
+                                  </div>                              
+                                </div>
+                              </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+              </div>
+              <!-- END CONTAINER FLUID -->
+            </div>               
             {% endblock %}
 
             {% block copyright %}
@@ -84,4 +442,5 @@ SPED Read - Admin
       {% endblock %}
     </div>
     <!-- END PAGE CONTAINER -->
+</div>
 {% endblock %}

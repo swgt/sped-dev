@@ -1,0 +1,69 @@
+{% extends "base/base.html" %}
+
+{% block title %}
+Upload . SPED Analytics
+{% endblock %}
+
+{% block sidebar-painel %}
+{% include "base/sidebar-painel.html" %}
+{% endblock %}
+    
+{% block page-container %}
+    <!-- START PAGE-CONTAINER -->
+    <div class="page-container">
+      {% block header %}
+      {% include "base/header.html" %}
+      {% endblock %}
+
+      {% block page-content-wrapper %}
+        <!-- START PAGE CONTENT WRAPPER -->
+        <div class="page-content-wrapper">
+            {% block page-content %}
+            <div class="content">  
+              <!-- START CONTAINER FLUID -->
+              <div class="container-fluid container-fixed-lg">
+                <ul class="breadcrumb">
+                  <li>
+                    <a href="#">Home</a>
+                  </li>
+                  <li><a href="#" class="active">Upload SPED</a>
+                  </li>
+                </ul>
+                <!-- END BREADCRUMB -->
+                <div class="row">
+                    <div class="col-md-6"> 
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    Enviar SPED
+                                </div>
+                                <div class="tools">
+                                    <a class="collapse" href="javascript:;"></a>
+                                    <a class="config" data-toggle="modal" href="#grid-config"></a>
+                                    <a class="reload" href="javascript:;"></a>
+                                    <a class="remove" href="javascript:;"></a>
+                                </div>
+                            </div>
+                            <div class="panel-body no-scroll no-padding">
+                                <form action="/file-upload" class="dropzone no-margin dz-clickable">
+
+                                    <div class="dz-default dz-message"><span>Soltar arquivo aqui para fazer o upload</span></div></form>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+              </div>
+              <!-- END CONTAINER FLUID -->
+            </div>               
+            {% endblock %}
+
+            {% block copyright %}
+            {% include "base/copyright.html" %}
+            {% endblock %}
+        </div>
+        <!-- END PAGE CONTENT WRAPPER -->
+      {% endblock %}
+    </div>
+    <!-- END PAGE CONTAINER -->
+</div>
+{% endblock %}

@@ -238,7 +238,7 @@ nv.models.cumulativeLineChart = function() {
 
       if (showControls) {
         var controlsData = [
-          { key: 'Re-scale y-axis', disabled: !rescaleY }
+          { key: 'Redimencionar', disabled: !rescaleY }
         ];
 
         controls

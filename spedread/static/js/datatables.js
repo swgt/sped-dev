@@ -25,9 +25,32 @@
             "scrollCollapse": true,
             "oLanguage": {
                 "sLengthMenu": "_MENU_ ",
-                "sInfo": "Showing <b>_START_ to _END_</b> of _TOTAL_ entries"
+                "sInfo": "Mostrando <b>_START_ de _END_</b> de _TOTAL_ Entradas"
             },
-            "iDisplayLength": 5
+            "iDisplayLength": 7
+        };
+
+        table.dataTable(settings);
+
+        // search box for table
+        $('#search-table').keyup(function() {
+            table.fnFilter($(this).val());
+        });
+    }
+    
+var initTableWithSearch2 = function() {
+        var table = $('#tableWithSearch2');
+
+        var settings = {
+            "sDom": "<'table-responsive't><'row'<p i>>",
+            "sPaginationType": "bootstrap",
+            "destroy": true,
+            "scrollCollapse": true,
+            "oLanguage": {
+                "sLengthMenu": "_MENU_ ",
+                "sInfo": "Mostrando <b>_START_ de _END_</b> de _TOTAL_ Saídas"
+            },
+            "iDisplayLength": 7
         };
 
         table.dataTable(settings);
@@ -136,6 +159,7 @@
     }
 
     initTableWithSearch();
+    initTableWithSearch2();
     initTableWithDynamicRows();
     initTableWithExportOptions();
 
