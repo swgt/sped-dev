@@ -9,3 +9,5 @@ class CampoAdmin(admin.ModelAdmin):
     list_display = ('registro','nome','num_posicao', 'descricao')
 
 admin.site.register(Campo, CampoAdmin)
+
+admin.site.register(Sped)

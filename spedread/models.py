@@ -14,6 +14,7 @@ class Registro(models.Model):
 	nome = models.CharField(max_length=255)
 	descricao = models.CharField(max_length=255)
 
+
 	def __str__(self):
 		return self.nome
 
@@ -36,7 +37,7 @@ class ValoresPadroes():
 #INÍCIO DA LEITURA DE DADOS DO DOCUMENTO
 
 class Sped(models.Model):
-	data_upload =  models.DateField()
+	data_upload =  models.DateField(auto_now_add=True)
 	nome = models.CharField(max_length=255)
 
 class ValoresSped(models.Model):
@@ -44,5 +45,5 @@ class ValoresSped(models.Model):
 	campo = models.ForeignKey(Campo)
 	valor = models.CharField(max_length=255)
 	fim_linha = models.BooleanField()
-
+	
 #FIM DA LEITURA DE DADOS DO DOCUMENTO
